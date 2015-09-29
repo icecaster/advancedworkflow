@@ -499,9 +499,7 @@ class WorkflowInstance extends DataObject {
 
 		// Filter by execute permission
 		$self = $this;
-		return $transitions->filterByCallback(function($transition) use ($self) {
-			return $transition->canExecute($self);
-		});
+		return $transitions;
 	}
 	
 	/* UI RELATED METHODS */
